@@ -1,6 +1,10 @@
 sudo: required
 services: -docker
 
+language: node_js
+node_js:
+  - "stable"
+
 before_install:
   - docker build -t madhu0309/docker-react -f Dockerfile.dev .
 
