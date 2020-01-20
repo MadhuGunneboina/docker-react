@@ -1,0 +1,8 @@
+sudo: required
+services: -docker
+
+before_install:
+  - docker build -t madhu0309/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run madhu0309/docker-react yarn run test -- --coverage
